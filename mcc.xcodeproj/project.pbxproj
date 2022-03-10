@@ -7,7 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		9599F7BF27DA3FAF004CE99F /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9599F7BE27DA3FAF004CE99F /* main.swift */; };
+		9599F7C727DA3FEA004CE99F /* ArgumentParser in Frameworks */ = {isa = PBXBuildFile; productRef = 9599F7C627DA3FEA004CE99F /* ArgumentParser */; };
+		9599F7CA27DA400A004CE99F /* Swifter in Frameworks */ = {isa = PBXBuildFile; productRef = 9599F7C927DA400A004CE99F /* Swifter */; };
+		9599F7CD27DA4020004CE99F /* MatrixClient in Frameworks */ = {isa = PBXBuildFile; productRef = 9599F7CC27DA4020004CE99F /* MatrixClient */; };
+		9599F7D227DA40D1004CE99F /* mcc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9599F7D127DA40D1004CE99F /* mcc.swift */; };
+		9599F7D927DA4149004CE99F /* AuthOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9599F7D627DA4149004CE99F /* AuthOptions.swift */; };
+		9599F7DA27DA4149004CE99F /* Auth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9599F7D727DA4149004CE99F /* Auth.swift */; };
+		9599F7DB27DA4149004CE99F /* Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9599F7D827DA4149004CE99F /* Login.swift */; };
+		9599F7DD27DA4153004CE99F /* Register.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9599F7DC27DA4153004CE99F /* Register.swift */; };
+		9599F7DF27DA4159004CE99F /* Register+Recaptcha.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9599F7DE27DA4159004CE99F /* Register+Recaptcha.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -24,7 +32,13 @@
 
 /* Begin PBXFileReference section */
 		9599F7BB27DA3FAF004CE99F /* mcc */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = mcc; sourceTree = BUILT_PRODUCTS_DIR; };
-		9599F7BE27DA3FAF004CE99F /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		9599F7CF27DA404B004CE99F /* MatrixCore */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = MatrixCore; path = ../MatrixCore; sourceTree = "<group>"; };
+		9599F7D127DA40D1004CE99F /* mcc.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = mcc.swift; sourceTree = "<group>"; };
+		9599F7D627DA4149004CE99F /* AuthOptions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthOptions.swift; sourceTree = "<group>"; };
+		9599F7D727DA4149004CE99F /* Auth.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Auth.swift; sourceTree = "<group>"; };
+		9599F7D827DA4149004CE99F /* Login.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Login.swift; sourceTree = "<group>"; };
+		9599F7DC27DA4153004CE99F /* Register.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Register.swift; sourceTree = "<group>"; };
+		9599F7DE27DA4159004CE99F /* Register+Recaptcha.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Register+Recaptcha.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -32,6 +46,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9599F7CD27DA4020004CE99F /* MatrixClient in Frameworks */,
+				9599F7C727DA3FEA004CE99F /* ArgumentParser in Frameworks */,
+				9599F7CA27DA400A004CE99F /* Swifter in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -43,6 +60,7 @@
 			children = (
 				9599F7BD27DA3FAF004CE99F /* mcc */,
 				9599F7BC27DA3FAF004CE99F /* Products */,
+				9599F7CE27DA404B004CE99F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -57,9 +75,30 @@
 		9599F7BD27DA3FAF004CE99F /* mcc */ = {
 			isa = PBXGroup;
 			children = (
-				9599F7BE27DA3FAF004CE99F /* main.swift */,
+				9599F7D527DA4137004CE99F /* auth */,
+				9599F7D127DA40D1004CE99F /* mcc.swift */,
 			);
 			path = mcc;
+			sourceTree = "<group>";
+		};
+		9599F7CE27DA404B004CE99F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9599F7CF27DA404B004CE99F /* MatrixCore */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		9599F7D527DA4137004CE99F /* auth */ = {
+			isa = PBXGroup;
+			children = (
+				9599F7D727DA4149004CE99F /* Auth.swift */,
+				9599F7D627DA4149004CE99F /* AuthOptions.swift */,
+				9599F7DE27DA4159004CE99F /* Register+Recaptcha.swift */,
+				9599F7DC27DA4153004CE99F /* Register.swift */,
+				9599F7D827DA4149004CE99F /* Login.swift */,
+			);
+			path = auth;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -78,6 +117,11 @@
 			dependencies = (
 			);
 			name = mcc;
+			packageProductDependencies = (
+				9599F7C627DA3FEA004CE99F /* ArgumentParser */,
+				9599F7C927DA400A004CE99F /* Swifter */,
+				9599F7CC27DA4020004CE99F /* MatrixClient */,
+			);
 			productName = mcc;
 			productReference = 9599F7BB27DA3FAF004CE99F /* mcc */;
 			productType = "com.apple.product-type.tool";
@@ -94,6 +138,7 @@
 				TargetAttributes = {
 					9599F7BA27DA3FAF004CE99F = {
 						CreatedOnToolsVersion = 13.3;
+						LastSwiftMigration = 1330;
 					};
 				};
 			};
@@ -106,6 +151,11 @@
 				Base,
 			);
 			mainGroup = 9599F7B227DA3FAF004CE99F;
+			packageReferences = (
+				9599F7C527DA3FE9004CE99F /* XCRemoteSwiftPackageReference "swift-argument-parser" */,
+				9599F7C827DA400A004CE99F /* XCRemoteSwiftPackageReference "swifter" */,
+				9599F7CB27DA4020004CE99F /* XCRemoteSwiftPackageReference "MatrixCore" */,
+			);
 			productRefGroup = 9599F7BC27DA3FAF004CE99F /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -120,7 +170,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9599F7BF27DA3FAF004CE99F /* main.swift in Sources */,
+				9599F7D927DA4149004CE99F /* AuthOptions.swift in Sources */,
+				9599F7D227DA40D1004CE99F /* mcc.swift in Sources */,
+				9599F7DF27DA4159004CE99F /* Register+Recaptcha.swift in Sources */,
+				9599F7DA27DA4149004CE99F /* Auth.swift in Sources */,
+				9599F7DB27DA4149004CE99F /* Login.swift in Sources */,
+				9599F7DD27DA4153004CE99F /* Register.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -243,10 +298,18 @@
 		9599F7C327DA3FAF004CE99F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 3YM32478AN;
 				ENABLE_HARDENED_RUNTIME = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 12.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
@@ -254,9 +317,16 @@
 		9599F7C427DA3FAF004CE99F /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 3YM32478AN;
 				ENABLE_HARDENED_RUNTIME = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 12.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 			};
@@ -284,6 +354,51 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		9599F7C527DA3FE9004CE99F /* XCRemoteSwiftPackageReference "swift-argument-parser" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/apple/swift-argument-parser.git";
+			requirement = {
+				branch = async;
+				kind = branch;
+			};
+		};
+		9599F7C827DA400A004CE99F /* XCRemoteSwiftPackageReference "swifter" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/httpswift/swifter.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.5.0;
+			};
+		};
+		9599F7CB27DA4020004CE99F /* XCRemoteSwiftPackageReference "MatrixCore" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/MatrixCore/MatrixCore";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		9599F7C627DA3FEA004CE99F /* ArgumentParser */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9599F7C527DA3FE9004CE99F /* XCRemoteSwiftPackageReference "swift-argument-parser" */;
+			productName = ArgumentParser;
+		};
+		9599F7C927DA400A004CE99F /* Swifter */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9599F7C827DA400A004CE99F /* XCRemoteSwiftPackageReference "swifter" */;
+			productName = Swifter;
+		};
+		9599F7CC27DA4020004CE99F /* MatrixClient */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9599F7CB27DA4020004CE99F /* XCRemoteSwiftPackageReference "MatrixCore" */;
+			productName = MatrixClient;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 9599F7B327DA3FAF004CE99F /* Project object */;
 }
