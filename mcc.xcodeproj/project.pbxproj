@@ -35,6 +35,7 @@
 /* Begin PBXFileReference section */
 		95452AA327DBA66000A47D81 /* config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = config.swift; sourceTree = "<group>"; };
 		95452AA527DBADB900A47D81 /* Capabilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Capabilities.swift; sourceTree = "<group>"; };
+		95452AA727DBB24D00A47D81 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		9599F7BB27DA3FAF004CE99F /* mcc */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = mcc; sourceTree = BUILT_PRODUCTS_DIR; };
 		9599F7CF27DA404B004CE99F /* MatrixCore */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = MatrixCore; path = ../MatrixCore; sourceTree = "<group>"; };
 		9599F7D127DA40D1004CE99F /* mcc.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = mcc.swift; sourceTree = "<group>"; };
@@ -62,6 +63,7 @@
 		9599F7B227DA3FAF004CE99F = {
 			isa = PBXGroup;
 			children = (
+				95452AA727DBB24D00A47D81 /* README.md */,
 				9599F7BD27DA3FAF004CE99F /* mcc */,
 				9599F7BC27DA3FAF004CE99F /* Products */,
 				9599F7CE27DA404B004CE99F /* Frameworks */,
