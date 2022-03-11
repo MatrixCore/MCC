@@ -49,6 +49,8 @@ extension Mcc.Auth {
                 try await loginFlows(logger: logger, client: client)
             case "register_flows":
                 try await registerFlows(logger: logger, client: client)
+            case "versions":
+                try await versions(logger: logger, client: client)
             default:
                 print("Unknown target")
             }
@@ -62,6 +64,11 @@ extension Mcc.Auth {
         func registerFlows(logger _: Logger, client: MatrixClient) async throws {
             let flows = try await client.getRegisterFlows()
             dump(flows)
+        }
+
+        func versions(logger _: Logger, client: MatrixClient) async throws {
+            let versions = try await client.getVersions()
+            dump(versions)
         }
     }
 }

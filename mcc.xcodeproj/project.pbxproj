@@ -39,6 +39,7 @@
 		9599F7D827DA4149004CE99F /* Login.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Login.swift; sourceTree = "<group>"; };
 		9599F7DC27DA4153004CE99F /* Register.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Register.swift; sourceTree = "<group>"; };
 		9599F7DE27DA4159004CE99F /* Register+Recaptcha.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Register+Recaptcha.swift"; sourceTree = "<group>"; };
+		95B8A34A27DB8C6100A14ACC /* MatrixCapabilities.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; name = MatrixCapabilities.md; path = ../MatrixCore/Sources/MatrixClient/MatrixClient.docc/Extensions/MatrixCapabilities.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +59,7 @@
 		9599F7B227DA3FAF004CE99F = {
 			isa = PBXGroup;
 			children = (
+				95B8A34A27DB8C6100A14ACC /* MatrixCapabilities.md */,
 				9599F7BD27DA3FAF004CE99F /* mcc */,
 				9599F7BC27DA3FAF004CE99F /* Products */,
 				9599F7CE27DA404B004CE99F /* Frameworks */,
@@ -299,6 +301,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 3YM32478AN;
 				ENABLE_HARDENED_RUNTIME = YES;
@@ -318,6 +321,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 3YM32478AN;
 				ENABLE_HARDENED_RUNTIME = YES;
@@ -360,7 +364,7 @@
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/apple/swift-argument-parser.git";
 			requirement = {
-				branch = async;
+				branch = 34aff6b87d5a788fe6441248d82db905f43c9b50;
 				kind = branch;
 			};
 		};

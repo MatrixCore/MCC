@@ -1,0 +1,22 @@
+Target dependency graph (10 targets)
+AnyCodable in AnyCodable, no dependencies
+AnyCodable in AnyCodable, depends on:
+AnyCodable in AnyCodable (explicit)
+MatrixClient in MatrixCore, depends on:
+AnyCodable in AnyCodable (explicit)
+MatrixClient in MatrixCore, depends on:
+MatrixClient in MatrixCore (explicit)
+AnyCodable in AnyCodable (explicit)
+ArgumentParserToolInfo in swift-argument-parser, no dependencies
+ArgumentParser in swift-argument-parser, depends on:
+ArgumentParserToolInfo in swift-argument-parser (explicit)
+ArgumentParser in swift-argument-parser, depends on:
+ArgumentParser in swift-argument-parser (explicit)
+ArgumentParserToolInfo in swift-argument-parser (explicit)
+Swifter in Swifter, no dependencies
+Swifter in Swifter, depends on:
+Swifter in Swifter (explicit)
+mcc in mcc, depends on:
+MatrixClient in MatrixCore (explicit)
+ArgumentParser in swift-argument-parser (explicit)
+Swifter in Swifter (explicit)
