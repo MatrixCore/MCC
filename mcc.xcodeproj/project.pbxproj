@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		95452AA427DBA66000A47D81 /* config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95452AA327DBA66000A47D81 /* config.swift */; };
+		95452AA627DBADB900A47D81 /* Capabilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95452AA527DBADB900A47D81 /* Capabilities.swift */; };
 		9599F7C727DA3FEA004CE99F /* ArgumentParser in Frameworks */ = {isa = PBXBuildFile; productRef = 9599F7C627DA3FEA004CE99F /* ArgumentParser */; };
 		9599F7CA27DA400A004CE99F /* Swifter in Frameworks */ = {isa = PBXBuildFile; productRef = 9599F7C927DA400A004CE99F /* Swifter */; };
 		9599F7CD27DA4020004CE99F /* MatrixClient in Frameworks */ = {isa = PBXBuildFile; productRef = 9599F7CC27DA4020004CE99F /* MatrixClient */; };
@@ -31,6 +33,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		95452AA327DBA66000A47D81 /* config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = config.swift; sourceTree = "<group>"; };
+		95452AA527DBADB900A47D81 /* Capabilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Capabilities.swift; sourceTree = "<group>"; };
 		9599F7BB27DA3FAF004CE99F /* mcc */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = mcc; sourceTree = BUILT_PRODUCTS_DIR; };
 		9599F7CF27DA404B004CE99F /* MatrixCore */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = MatrixCore; path = ../MatrixCore; sourceTree = "<group>"; };
 		9599F7D127DA40D1004CE99F /* mcc.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = mcc.swift; sourceTree = "<group>"; };
@@ -39,7 +43,6 @@
 		9599F7D827DA4149004CE99F /* Login.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Login.swift; sourceTree = "<group>"; };
 		9599F7DC27DA4153004CE99F /* Register.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Register.swift; sourceTree = "<group>"; };
 		9599F7DE27DA4159004CE99F /* Register+Recaptcha.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Register+Recaptcha.swift"; sourceTree = "<group>"; };
-		95B8A34A27DB8C6100A14ACC /* MatrixCapabilities.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; name = MatrixCapabilities.md; path = ../MatrixCore/Sources/MatrixClient/MatrixClient.docc/Extensions/MatrixCapabilities.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,7 +62,6 @@
 		9599F7B227DA3FAF004CE99F = {
 			isa = PBXGroup;
 			children = (
-				95B8A34A27DB8C6100A14ACC /* MatrixCapabilities.md */,
 				9599F7BD27DA3FAF004CE99F /* mcc */,
 				9599F7BC27DA3FAF004CE99F /* Products */,
 				9599F7CE27DA404B004CE99F /* Frameworks */,
@@ -79,6 +81,8 @@
 			children = (
 				9599F7D527DA4137004CE99F /* auth */,
 				9599F7D127DA40D1004CE99F /* mcc.swift */,
+				95452AA327DBA66000A47D81 /* config.swift */,
+				95452AA527DBADB900A47D81 /* Capabilities.swift */,
 			);
 			path = mcc;
 			sourceTree = "<group>";
@@ -176,8 +180,10 @@
 				9599F7D227DA40D1004CE99F /* mcc.swift in Sources */,
 				9599F7DF27DA4159004CE99F /* Register+Recaptcha.swift in Sources */,
 				9599F7DA27DA4149004CE99F /* Auth.swift in Sources */,
+				95452AA427DBA66000A47D81 /* config.swift in Sources */,
 				9599F7DB27DA4149004CE99F /* Login.swift in Sources */,
 				9599F7DD27DA4153004CE99F /* Register.swift in Sources */,
+				95452AA627DBADB900A47D81 /* Capabilities.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

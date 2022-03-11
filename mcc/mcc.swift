@@ -13,6 +13,8 @@ struct Mcc: ParsableCommand {
         version: "0.1.0",
         subcommands: [
             Auth.self,
+            ConfigCommand.self,
+            Capabilities.self,
         ]
     )
 }

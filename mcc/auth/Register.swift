@@ -19,11 +19,10 @@ extension Mcc.Auth {
             abstract: "Register a new user"
         )
 
-        @Option(name: .long, help: "The homeserver to use.")
-        var homeserver: String
+        @OptionGroup var options: Mcc.Auth.Options
 
-        @Option(name: .shortAndLong, help: "user id to use")
-        var userID: String?
+        @Flag()
+        var noSave: Bool = false
 
         @Option(name: .shortAndLong, help: "password to use")
         var password: String?
@@ -37,7 +36,7 @@ extension Mcc.Auth {
 
         mutating func run() async throws {
             let logger = Logger()
-            let client = await MatrixClient(homeserver: try MatrixHomeserver(resolve: homeserver))
+            let client = await MatrixClient(homeserver: try MatrixHomeserver(resolve: options.homeserverConfig!))
 
             logger.debug("homeserver resolved url: \(client.homeserver.url)")
 
@@ -59,6 +58,12 @@ extension Mcc.Auth {
 
             print()
             print(register)
+
+            if !noSave {
+                Config.userID = register.userID
+                Config.token = register.accessToken
+                Config.homeServer = register.homeServer
+            }
         }
 
         mutating func register(logger: Logger, client: MatrixClient,
@@ -66,7 +71,7 @@ extension Mcc.Auth {
         {
             let register = try await client.register(
                 password: password!,
-                username: userID,
+                username: options.userIDConfig!,
                 auth: auth,
                 bind_email: false
             )
