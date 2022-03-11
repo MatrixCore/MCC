@@ -39,7 +39,7 @@ extension Mcc.Auth {
             let logger = Logger()
             let client = await MatrixClient(homeserver: try MatrixHomeserver(resolve: homeserver))
 
-            logger.debug("homserver resolved url: \(client.homeserver.url)")
+            logger.debug("homeserver resolved url: \(client.homeserver.url)")
 
             let info = try await client.getVersions()
             logger.debug("server has versions: \(info.versions)")
