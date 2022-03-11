@@ -22,12 +22,12 @@ extension Mcc.Auth {
         @Option(name: .shortAndLong, help: "Password to log in with")
         var password: String
 
-        @Option(name: .shortAndLong, help: "Device id to set")
-        var deviceId: String?
+        @Flag()
+        var noSave: Bool = false
 
         func run() async throws {
             let logger = Logger()
-            let client = await MatrixClient(homeserver: try MatrixHomeserver(resolve: options.homeserver))
+            let client = await MatrixClient(homeserver: try MatrixHomeserver(resolve: try options.homeserverThrow))
 
             logger.debug("resolved url: \(client.homeserver.url)")
 
@@ -39,10 +39,21 @@ extension Mcc.Auth {
                 throw MatrixError.Forbidden
             }
 
-            let login = try await client.login(username: options.userID, password: password, deviceId: deviceId)
+            let login = try await client.login(
+                username: try options.userIDThrow,
+                password: password,
+                deviceId: options.deviceIDConfig
+            )
             print("user id: \(login.userId ?? "")")
             print("token: \(login.accessToken ?? "")")
             print("device id: \(login.deviceId ?? "")")
+
+            if !noSave {
+                Config.userID = login.userId
+                Config.token = login.accessToken
+                Config.deviceID = login.deviceId
+                Config.homeServer = login.homeServer
+            }
         }
     }
 
@@ -57,7 +68,7 @@ extension Mcc.Auth {
 
         func run() async throws {
             let logger = Logger()
-            let client = await MatrixClient(homeserver: try MatrixHomeserver(resolve: options.homeserver))
+            let client = await MatrixClient(homeserver: try MatrixHomeserver(resolve: try options.homeserverThrow))
 
             logger.debug("resolved url: \(client.homeserver.url)")
 
